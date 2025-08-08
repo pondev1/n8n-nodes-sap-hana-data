@@ -14,15 +14,43 @@ This is an n8n community node for reading data from SAP HANA databases and HDI c
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+**⚠️ Important**: This node is designed for **self-hosted n8n** installations only. It cannot be used with n8n Cloud due to dependency requirements.
 
-### Community Nodes (Recommended)
+### Option 1: npm Installation (Recommended)
 
-1. Go to **Settings > Community Nodes**.
-2. Select **Install**.  
-3. Enter `n8n-nodes-sap-hana-data` as the npm package name.
-4. Agree to the [risks](https://docs.n8n.io/integrations/community-nodes/risks/) of using community nodes: select **I understand the risks of installing unverified code from a public source**.
-5. Select **Install**.
+1. Navigate to your n8n installation directory
+2. Install the package:
+   ```bash
+   npm install n8n-nodes-sap-hana-data
+   ```
+3. Restart your n8n instance
+
+### Option 2: Development Setup
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pondev1/n8n-nodes-sap-hana-data.git
+   cd n8n-nodes-sap-hana-data
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the node:
+   ```bash
+   npm run build
+   ```
+
+4. Link the package locally:
+   ```bash
+   npm pack
+   cd ~/.n8n
+   npm install "C:\path\to\n8n-nodes-sap-ai-core\n8n-nodes-sap-hana-data-1.0.0.tgz"
+   ```
+
+5. Restart your n8n instance
 
 After installing the node, you can use it like any other node in n8n.
 
